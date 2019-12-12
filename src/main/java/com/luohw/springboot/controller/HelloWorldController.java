@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import redis.clients.jedis.JedisCluster;
 
 /**
+ * springboot启动后测试类，用于看看页面出来了没
  * Created by luohw on 2018/5/2 0002.
  */
 
@@ -20,16 +21,16 @@ import redis.clients.jedis.JedisCluster;
 public class HelloWorldController {
     private static Logger logger = LogManager.getLogger("springbootlogger");
 
-
     @Autowired
     NeoProperties neoProperties;
-    @Autowired
-    JedisCluster jedisCluster;
-    @Autowired
-    GuidanceEvaluationListMapper guidanceEvaluationListMapper;
-    @Autowired
-    GuidanceService guidanceService;
+//    @Autowired
+//    JedisCluster jedisCluster;
 
+
+    /**
+     * 只是为了测试服务，看能否读取配置
+     * @return
+     */
     @RequestMapping("/hello")
     public String index(){
         //输出property文件的内容
@@ -41,19 +42,6 @@ public class HelloWorldController {
 
         return neoProperties.getTitle()+"   "+neoProperties.getDescription();
 
-//        logger.debug("debug测试");
-//        logger.info("info测试");
-//        logger.warn("warn测试");
-//        logger.error("error测试");
-//
-//        System.out.println(JSON.toJSONString(guidanceEvaluationListMapper.getOne(3L)));
-//
-//        try {
-//            guidanceService.testTransaction();
-//            return "HelloWorld SpringBoot!!!";
-//        }catch (Exception e){
-//            logger.error("出现异常了",e);
-//            return "出现异常了";
-//        }
+
     }
 }

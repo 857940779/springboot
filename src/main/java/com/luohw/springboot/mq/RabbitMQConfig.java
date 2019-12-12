@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * Created by luohw on 2018/5/14 0014.
  */
-@Configuration
+//@Configuration
 public class RabbitMQConfig {
     //消息交换机的名字
     public static final String EXCHANGE = "my-mq-exchange";

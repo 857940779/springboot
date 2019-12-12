@@ -14,7 +14,7 @@ import java.util.Set;
 /**
  * Created by luohw on 2018/5/2 0002.
  */
-@Configuration
+//@Configuration
 public class JedisClusterConfig {
 
     @Autowired

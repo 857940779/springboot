@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * Created by luohw on 2018/5/2 0002.
  */
 
-@Component
+//@Component
 public class RedisProperties {
 
     @Value("${redis.cache.clusterNodes}")
